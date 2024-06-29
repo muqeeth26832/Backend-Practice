@@ -18,4 +18,10 @@ app.use(express.static("public")) //storing assests
 app.use(cookieParser()) // for using secure cookies (only accesible by server)
 
 
+// routes
+import userRouter from './routes/user.routes.js'
+
+// routes declaration
+app.use("/api/v1/users",userRouter)
+
 export { app };
